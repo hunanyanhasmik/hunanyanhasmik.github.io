@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@300;400&family=Playfair+Display&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Playfair Display';
+    height: 95vh;
+    background: radial-gradient(circle, rgba(27, 124, 237,0.7) 0%, rgb(10, 58, 112) 100%);
+}
+
+.wrapper {
+    max-width: 500px;
+    padding: 50px;
+    border-radius: 15px;
+    background: rgba(255,255,255, 0.1);
+    box-shadow:inset 0 14px 28px rgba(255,255,255,0.3), 0 10px 10px rgba(255,255,255,0.22), 0 14px 28px rgba(0,0,0,0.3), 0 10px 10px rgba(0,0,0,0.22);
+}
+.wrapper .wrapper__inner {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.wrapper .wrapper__inner .cover-img img {
+    display: block;
+    width: 220px;
+    height: 220px;
+    object-fit: cover;
+    margin-bottom: 15px;
+    border-radius: 50%;
+    filter: drop-shadow(0px 10px 10px #555);
+}
+.wrapper .wrapper__inner .info .name {
+    font-size: 30px;
+    color: rgba(55,31,118);
+    margin-bottom: 15px;
+}
+.wrapper .wrapper__inner .info .description {
+    font-family: 'Heebo', sans-serif;
+    margin-bottom: 20px;
+}
+.wrapper .wrapper__inner .info .social-media__title {
+    color: #371f76;
+    margin-bottom: 10px;
+}
+.wrapper .wrapper__inner .info .social-media {
+    display: flex;
+    width: 300px;
+    justify-content: space-between;
+    margin: 0 auto;
+    padding-top: 10px;
+
+}
+.wrapper .wrapper__inner .info .social-media a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 45px;
+    height: 45px;
+    font-size: 20px;
+    text-decoration: none;
+    margin-right: 10px;
+    line-height: 84px;
+    border-radius: 50%;
+    text-align: center;
+    position: relative;
+    color: #fff;
+    background-color: rgba(255, 255, 255, 0.3);
+    transition: 300ms;
+}
+.wrapper .wrapper__inner .info .social-media a::after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 50%;
+    pointer-events: none;
+    box-sizing: content-box;
+    box-shadow: 0 0 0 3px #fff;
+    opacity: 0;
+    transition: 300ms;
+}
+.wrapper .wrapper__inner .info .social-media a:hover {
+    background-color: #fff;
+    color: #371f76;;
+}
+.wrapper .wrapper__inner .info .social-media a:hover::after {
+    opacity: 1;
+    transform: scale(1.15);
+}
